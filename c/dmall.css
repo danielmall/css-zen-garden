@@ -1,0 +1,153 @@
+/*
+*************************************************
+
+CSS ZEN GARDEN
+General Screen Styles
+
+Created by the epic SuperFriendly team.
+http://superfriend.ly/
+
+*************************************************
+*/
+
+
+/*-------------------------------------------    
+    Fonts     
+-------------------------------------------*/
+
+
+
+/*-------------------------------------------    
+    Flag
+    (Thanks Jeremy: http://adactio.com/journal/5429/)
+-------------------------------------------*/
+body:after { content: 'mini'; display: none; }
+
+
+
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* { margin: 0; padding: 0; }
+html { font-size: 62.5%; } /* for rems */
+body { font-family: Georgia, 'Times New Roman', serif; color: #333; background: #fefdfb; }
+
+
+/* block level */
+
+h1, .h1 { font: bold 4.2rem Georgia, 'Times New Roman', serif; margin: 0 0 0.5em; }
+h2, .h2 { font: bold 1.8rem Georgia, 'Times New Roman', serif; margin: 0 0 1em; }
+h3, .h3 { font: bold 1.5rem Georgia, 'Times New Roman', serif; margin: 0 0 1em; }
+h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem Georgia, 'Times New Roman', serif; margin: 0 0 1em; }
+
+p, ul, dl, ol, table { font-size: 16px; margin: 0 0 1.5em; }
+
+form { margin: 0 0 1.5em; }
+
+/* inline */
+
+label { font-size: 1.6rem; }
+input, select, textarea {  }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { }
+input.empty::-webkit-input-placeholder, textarea.empty::-webkit-input-placeholder { color: red; }
+input.empty:-moz-placeholder, textarea.empty:-moz-placeholder { color: red; }
+.error { color: red; }
+
+table { }
+    td { padding: 0.25em 1em; border-top: 1px solid #aaa; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+mark { background: none; font-style: normal; }
+
+video { width: 100%; height: auto; }
+
+a { text-decoration: none; }
+a:hover, a:focus { color: red; }
+
+img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
+
+a img { border: none; }
+
+i { font-style: normal; }
+b { font-weight: normal; }
+
+abbr, abbr[title], acronym { font-size: 75%; letter-spacing: 0.2em; text-transform: uppercase; border: none; }
+
+code { font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace; color: #999; }
+
+sub, sup { line-height: 0; }
+
+::selection { background: #2a69c2; color: #fff; }
+::-moz-selection { background: #2a69c2; color: #fff; }
+
+
+/*-------------------------------------------    
+    Global
+-------------------------------------------*/
+ 
+/* Phark Image Replacement - http://phark.typepad.com/phark/2003/08/accessible_imag.html */
+.phark { display: block; text-indent: -9999px; background-position: 0 0; background-repeat: no-repeat; background-color: transparent; }
+
+/* Trimming Outline in Firefox - http://snook.ca/archives/html_and_css/trimming_long_o  */
+/*\*/ .phark-link { overflow: hidden; } /**/
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */ 
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.offscreen { position: absolute; left: -9999px; display: block; }
+.onscreen { left: 0; }
+
+.hide { display: none; }
+
+.no-bullets { list-style: none; }
+
+.bulleted { list-style: disc; }
+
+.uppercase { text-transform: uppercase; }
+
+.rwd-break { display: block; }
+
+.kellum { text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+/*-------------------------------------------    
+        Modules
+-------------------------------------------*/
+
+
+
+
+
+/*-------------------------------------------    
+        Banner
+-------------------------------------------*/
+
+[role="banner"] { padding: 6em 0 5em; background: transparent url(../i/banner-small.jpg) no-repeat 50% 50%; background-size: cover; margin: 10px; }
+    [role="banner"] h1 { font: 2rem Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3em; text-align: center; color: #243a49; color: #fff; }
+    [role="banner"] h2 { visibility: hidden; }
+    [role="banner"] h2:after { content: "The Fresh Flavors of a Modern Web"; display: block; visibility: visible; text-align: center; color: #8c8b8a; color: #fff; font-size: 1.4rem; font-style: italic; margin: -2em 0 2em; font-weight: normal; }
+
+/*[role="banner"] { background: transparent url(../i/banner.jpg) no-repeat right 0; background-size: 50% auto; }
+
+@media screen and (min-width: 550px){
+  [role="banner"], .summary { padding-right: 50%; }
+}*/
+
+
+/*-------------------------------------------    
+        Summary
+-------------------------------------------*/
+.summary { text-align: center; font-size: 1.4rem; width: 95%; margin: 0 auto; border-bottom: 1px solid #cbcac9; margin-bottom: 3em; max-width: 550px; }
+    
+    .summary p:nth-child(1) { border-bottom: 1px solid #cbcac9; padding: 0 0 2.5em; line-height: 1.4; }
+
+    .summary p:nth-child(2) { visibility: hidden; background: green; position: relative; min-height: 5em; }
+    .summary p:nth-child(2):before { content: "Ingredients"; display: inline-block; visibility: visible; font: 1.4rem Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3em; /*background: #fefdfb; background: red;*/ text-align: center; position: relative; top: -2.4em; padding: 0; width: 100%; }
+        
+        .summary p:nth-child(2) a { visibility: visible; position: absolute; left: 0; width: 100%; text-align: left; text-transform: uppercase; letter-spacing: 0.2em; font-size: 1.4rem; }
+        .summary p:nth-child(2) a:after { content: "\00BD \0020 cup"; display: block; position: absolute; right: 0; top: 0; text-transform: none; letter-spacing: 0; }
+
+        .summary p:nth-child(2) a:nth-child(2) { top: 4em; }
+
+
