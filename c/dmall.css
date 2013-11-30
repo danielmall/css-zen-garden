@@ -123,16 +123,10 @@ sub, sup { line-height: 0; }
         Banner
 -------------------------------------------*/
 
-[role="banner"] { padding: 6em 0 5em; background: transparent url(../i/banner-small.jpg) no-repeat 50% 50%; background-size: cover; margin: 10px; }
+[role="banner"] { padding: 7em 0 5em; background: transparent url(../i/banner-small.jpg) no-repeat 50% 50%; background-size: cover; margin: 10px; }
     [role="banner"] h1 { font: 2rem Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3em; text-align: center; color: #243a49; color: #fff; }
     [role="banner"] h2 { visibility: hidden; }
     [role="banner"] h2:after { content: "The Fresh Flavors of a Modern Web"; display: block; visibility: visible; text-align: center; color: #8c8b8a; color: #fff; font-size: 1.4rem; font-style: italic; margin: -2em 0 2em; font-weight: normal; }
-
-/*[role="banner"] { background: transparent url(../i/banner.jpg) no-repeat right 0; background-size: 50% auto; }
-
-@media screen and (min-width: 550px){
-  [role="banner"], .summary { padding-right: 50%; }
-}*/
 
 
 /*-------------------------------------------    
@@ -149,5 +143,17 @@ sub, sup { line-height: 0; }
         .summary p:nth-child(2) a:after { content: "\00BD \0020 cup"; display: block; position: absolute; right: 0; top: 0; text-transform: none; letter-spacing: 0; }
 
         .summary p:nth-child(2) a:nth-child(2) { top: 4em; }
+
+
+@media screen and (min-width: 856px){
+    
+    [role="banner"], .summary { width: 47.5%; margin: 0 0 0 2.5%; }
+
+    .intro { position: relative; }
+    [role="banner"] { background: none; }
+    [role="banner"]:after { content: ""; display: block; width: 45%; height: 674px; background: red url(../i/banner.jpg) no-repeat right 0; background-size: cover; position: absolute; right: 10px; top: 10px; }
+        [role="banner"] h1 { color: #243a49; }
+        [role="banner"] h2:after { color: #8c8b8a; }
+}
 
 
