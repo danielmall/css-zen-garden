@@ -115,6 +115,7 @@ sub, sup { line-height: 0; }
         Modules
 -------------------------------------------*/
 
+.intro { position: relative; }
 
 
 
@@ -123,9 +124,18 @@ sub, sup { line-height: 0; }
         Banner
 -------------------------------------------*/
 
-[role="banner"] { padding: 7em 0 5em; background: transparent url(../i/banner-small.jpg) no-repeat 50% 50%; background-size: cover; margin: 10px; }
+[role="banner"] { padding: 10em 0 7em; background: transparent url(../i/banner-small.jpg) no-repeat 50% 50%; background-size: cover; margin: 10px 10px 2em; }
     [role="banner"] h1 { font: 2rem Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3em; text-align: center; color: #243a49; color: #fff; }
+
+    /* Diamond outline */
+    [role="banner"] h1:before { content: ""; border: 1px solid #aaaaa8; border: 1px solid #fff; display: block; width: 2em; height: 2em; position: absolute; top: 2em; left: 50%; margin-left: -1em; -webkit-transform: rotate(45deg); }
+
     [role="banner"] h2 { visibility: hidden; }
+
+    /* CZG */
+    [role="banner"] h2:before { content: "CZG"; display: block; visibility: visible; font: 1rem Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3em; position: absolute; top: 5.5em; left: 50%; margin-left: -1.2em; color: #fff; }
+    
+    /* Tagline */
     [role="banner"] h2:after { content: "The Fresh Flavors of a Modern Web"; display: block; visibility: visible; text-align: center; color: #8c8b8a; color: #fff; font-size: 1.4rem; font-style: italic; margin: -2em 0 2em; font-weight: normal; }
 
 
@@ -137,7 +147,10 @@ sub, sup { line-height: 0; }
     .summary p:nth-child(1) { border-bottom: 1px solid #cbcac9; padding: 0 0 2.5em; line-height: 1.4; }
 
     .summary p:nth-child(2) { visibility: hidden; background: green; position: relative; min-height: 5em; }
-    .summary p:nth-child(2):before { content: "Ingredients"; display: inline-block; visibility: visible; font: 1.4rem Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3em; /*background: #fefdfb; background: red;*/ text-align: center; position: relative; top: -2.4em; padding: 0; width: 100%; }
+
+    /* "Ingredients" label */
+    .summary p:nth-child(2):before { content: "Ingredients"; display: inline-block; visibility: visible; font: 1.4rem Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3em; text-align: center; position: relative; top: -2.4em; padding: 0; width: 100%; z-index: 2; color: #ababab; }
+    .summary p:nth-child(2):after { visibility: visible; content: ""; display: block; background: #fefdfb; position: relative; top: -4.5em; left: 50%; width: 180px; height: 1.3em; margin-left: -90px; z-index: 1; }
         
         .summary p:nth-child(2) a { visibility: visible; position: absolute; left: 0; width: 100%; text-align: left; text-transform: uppercase; letter-spacing: 0.2em; font-size: 1.4rem; }
         .summary p:nth-child(2) a:after { content: "\00BD \0020 cup"; display: block; position: absolute; right: 0; top: 0; text-transform: none; letter-spacing: 0; }
@@ -149,11 +162,21 @@ sub, sup { line-height: 0; }
     
     [role="banner"], .summary { width: 47.5%; margin: 0 0 0 2.5%; }
 
-    .intro { position: relative; }
-    [role="banner"] { background: none; }
+    [role="banner"] { background: none; max-width: 550px; padding: 15% 0 0; }
     [role="banner"]:after { content: ""; display: block; width: 45%; height: 674px; background: red url(../i/banner.jpg) no-repeat right 0; background-size: cover; position: absolute; right: 10px; top: 10px; }
+
         [role="banner"] h1 { color: #243a49; }
+        [role="banner"] h1:before { border-color: #aaaaa8; top: 7%; left: 26%; }
+
+        /* CZG */
+        [role="banner"] h2:before { color: #737272; }
         [role="banner"] h2:after { color: #8c8b8a; }
+
+    .summary { margin-bottom: 25%; }
+}
+
+@media screen and (min-width: 1163px){
+    [role="banner"], .summary { margin-left: 5%; }
 }
 
 
