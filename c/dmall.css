@@ -63,7 +63,7 @@ mark { background: none; font-style: normal; }
 
 video { width: 100%; height: auto; }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: #5183a6; }
 a:hover, a:focus { color: red; }
 
 img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
@@ -112,7 +112,7 @@ sub, sup { line-height: 0; }
 .kellum { text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
 /*-------------------------------------------    
-        Modules
+    Modules
 -------------------------------------------*/
 
 .intro { position: relative; }
@@ -121,7 +121,7 @@ sub, sup { line-height: 0; }
 
 
 /*-------------------------------------------    
-        Banner
+    Banner
 -------------------------------------------*/
 
 [role="banner"] { padding: 10em 0 7em; background: transparent url(../i/banner-small.jpg) no-repeat 50% 50%; background-size: cover; margin: 10px 10px 2em; }
@@ -140,7 +140,7 @@ sub, sup { line-height: 0; }
 
 
 /*-------------------------------------------    
-        Summary
+    Summary
 -------------------------------------------*/
 .summary { text-align: center; font-size: 1.4rem; width: 95%; margin: 0 auto; border-bottom: 1px solid #cbcac9; margin-bottom: 3em; max-width: 550px; }
     
@@ -153,7 +153,7 @@ sub, sup { line-height: 0; }
     .summary p:nth-child(2):after { visibility: visible; content: ""; display: block; background: #fefdfb; position: relative; top: -4.5em; left: 50%; width: 180px; height: 1.3em; margin-left: -90px; z-index: 1; }
         
         .summary p:nth-child(2) a { visibility: visible; position: absolute; left: 0; width: 100%; text-align: left; text-transform: uppercase; letter-spacing: 0.2em; font-size: 1.4rem; }
-        .summary p:nth-child(2) a:after { content: "\00BD \0020 cup"; display: block; position: absolute; right: 0; top: 0; text-transform: none; letter-spacing: 0; }
+        .summary p:nth-child(2) a:after { content: "\00BD \0020 cup"; display: block; position: absolute; right: 0; top: 0; text-transform: none; letter-spacing: 0; color: #5e5e5e; }
 
         .summary p:nth-child(2) a:nth-child(2) { top: 4em; }
 
@@ -166,17 +166,39 @@ sub, sup { line-height: 0; }
     [role="banner"]:after { content: ""; display: block; width: 45%; height: 674px; background: red url(../i/banner.jpg) no-repeat right 0; background-size: cover; position: absolute; right: 10px; top: 10px; }
 
         [role="banner"] h1 { color: #243a49; }
-        [role="banner"] h1:before { border-color: #aaaaa8; top: 7%; left: 26%; }
+        [role="banner"] h1:before { display: none; }
 
         /* CZG */
-        [role="banner"] h2:before { color: #737272; }
+        [role="banner"] h2:before { display: none; }
         [role="banner"] h2:after { color: #8c8b8a; }
 
-    .summary { margin-bottom: 25%; }
+    .summary { margin-bottom: 30%; }
 }
 
 @media screen and (min-width: 1163px){
     [role="banner"], .summary { margin-left: 5%; }
 }
 
+
+/*-------------------------------------------    
+    Sub sections
+-------------------------------------------*/
+.preamble, .explanation, .participation, .benefits, .requirements { margin: 0 auto; width: 95%; }
+.preamble h3, .explanation h3, .participation h3, .benefits h3, .requirements h3 { color: #fff; background: #333; padding: 6em 0; text-align: center; font: 2rem/1.4 Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.3em; }
+
+@media screen and (min-width: 856px){
+    /*.preamble, .explanation, .participation, .benefits, .requirements { width: 97.5%; margin-bottom: 10em; }
+    .preamble:after, .explanation:after, .participation:after, .benefits:after, .requirements:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+    .preamble h3, .explanation h3, .participation h3, .benefits h3, .requirements h3 { width: 47.5%; margin: 0 4% 0 2.5%; float: left; padding: 12em 0; }
+    .requirements h3 { padding: 18em 0; }
+    .explanation, .benefits { padding-left: 2.5%; }
+    .explanation h3, .benefits h3 { float: right; }*/
+
+
+    .preamble, .explanation, .participation, .benefits, .requirements { padding: 0 0 0 50%; position: relative; width: 50%; margin: 0 0 2em; }
+    .preamble h3, .explanation h3, .participation h3, .benefits h3, .requirements h3 { /*position: absolute;*/ left: 2%; top: 0; padding: 0; width: 46%; height: 100%; display: table-cell; vertical-align: middle; height: 400px; }
+
+
+
+}
 
