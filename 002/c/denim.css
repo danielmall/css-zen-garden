@@ -30,7 +30,7 @@ body:after { content: 'mini'; display: none; }
 -------------------------------------------*/
 * { margin: 0; padding: 0; }
 html { font-size: 62.5%; } /* for rems */
-body { font-family: Helvetica, Arial, sans-serif; color: #333; }
+body { font-family: Helvetica, Arial, sans-serif; color: #333; background: #e8ecf0 url(../i/denim.png) no-repeat 50% 350px; }
 
 
 /* block level */
@@ -112,52 +112,56 @@ sub, sup { line-height: 0; }
 /*-------------------------------------------    
 	Modules
 -------------------------------------------*/
+.page-wrapper { width: 94%; margin: 0 auto; }
 
-
+.main h3, .preamble h3 { visibility: hidden; }
+.main h3:after, .preamble h3:after { visibility: visible; display: block; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
 
 
 
 /*-------------------------------------------    
 	Banner
 -------------------------------------------*/
+[role="banner"] h1 { padding: 1em 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-size: 3.5rem; }
 [role="banner"] h1:before { content: "The "; }
-[role="banner"] h1:after { content: "Made in China"; visibility: visible; display: block; }
+[role="banner"] h1:after { content: "Made in China"; visibility: visible; display: block; color: #686a6c; letter-spacing: 0.5em; font-size: 1.4rem; font-weight: normal; margin: 0.5em 0 0; }
 
-[role="banner"] h2 { visibility: hidden; }
+[role="banner"] h2 { visibility: hidden; display: none; }
 [role="banner"] h2:after { content: "Ringspun Denim"; visibility: visible; display: block; }
-
 
 
 /*-------------------------------------------    
     Preamble
 -------------------------------------------*/
-.preamble h3 { visibility: hidden; }
-.preamble h3:after { visibility: visible; content: "A Fashion-Forward Future"; display: block; }
+.summary p { text-transform: uppercase; letter-spacing: 0.1em; font-size: 1.8rem; line-height: 1.6; }
+
+
+/*-------------------------------------------    
+    Preamble
+-------------------------------------------*/
+.preamble { background: transparent url(../i/sep.png) no-repeat 50% 0; }
+	.preamble h3:after { visibility: visible; content: "A Fashion-Forward Future";  }
 
 
 /*-------------------------------------------    
 	Explanation
 -------------------------------------------*/
-.explanation h3 { visibility: hidden; }
-.explanation h3:after { visibility: visible; content: "See Yourself in a Completely Different Way"; display: block; }
+.explanation h3:after { content: "See Yourself in a Completely Different Way";  }
 
 
 /*-------------------------------------------    
 	Participation
 -------------------------------------------*/
-.participation h3 { visibility: hidden; }
-.participation h3:after { visibility: visible; content: "Get Into a New Pair"; display: block; }
+.participation h3:after { content: "Get Into a New Pair";  }
 
 
 /*-------------------------------------------    
 	Benefits
 -------------------------------------------*/
-.benefits h3 { visibility: hidden; }
-.benefits h3:after { visibility: visible; content: "Look Great\2026  and Feel Great Too!"; display: block; }
+.benefits h3:after { content: "Look Great\2026  and Feel Great Too!";  }
 
 
 /*-------------------------------------------    
 	Requirements
 -------------------------------------------*/
-.requirements h3 { visibility: hidden; }
-.requirements h3:after { visibility: visible; content: "Find Your Size"; display: block; }
+.requirements h3:after { content: "Find Your Size";  }
