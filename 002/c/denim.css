@@ -63,8 +63,8 @@ mark { background: none; font-style: normal; }
 
 video { width: 100%; height: auto; }
 
-a { text-decoration: none; }
-a:hover, a:focus { color: red; }
+a { text-decoration: none; color: #a28351; }
+a:hover, a:focus { font-style: italic; }
 
 img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
 
@@ -114,8 +114,10 @@ sub, sup { line-height: 0; }
 -------------------------------------------*/
 .page-wrapper { width: 94%; margin: 0 auto; }
 
-.main h3, .preamble h3 { visibility: hidden; }
-.main h3:after, .preamble h3:after { visibility: visible; display: block; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.main h3, .preamble h3, .select { visibility: hidden; }
+.main h3:after, .preamble h3:after, .select:after { visibility: visible; display: block; font-size: 2.7rem; text-transform: uppercase; letter-spacing: 0.1em; }
+
+.main p, .preamble p { font-size: 2rem; }
 
 
 
@@ -165,3 +167,18 @@ sub, sup { line-height: 0; }
 	Requirements
 -------------------------------------------*/
 .requirements h3:after { content: "Find Your Size";  }
+
+
+/*-------------------------------------------    
+	Design Selection
+-------------------------------------------*/
+.design-selection { margin: 3em 0 0; }
+	.design-selection ul { list-style: none; width: 94%; margin: 0 auto; }
+	.design-selection ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+		.design-selection li { float: left; width: 50%; font-size: 1.2rem; margin: 0 0 1em; }
+		.design-selection li:nth-child(odd) { width: 47%; padding-right: 3%; clear: left; }
+			.design-name { display: block; font-size: 1.4rem; font-weight: bold; margin: 0 0 0.24em; text-transform: uppercase; letter-spacing: 0.1em; position: relative; }
+			/*.design-name:after { content: ""; display: inline-block; position: absolute; width: 100%; height: 2px; bottom: 0; left: 0; background: #a28351; }*/
+
+
+.select:after { content: "Washes & Styles"; font-size: 1.8rem; text-align: center; width: 7em; margin: 0 auto 2em; background: transparent url(../i/waves.png) no-repeat 50% 0; padding: 2em 0 0; }
