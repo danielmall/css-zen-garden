@@ -161,7 +161,7 @@ sub, sup { line-height: 0; }
 /*-------------------------------------------    
 	Explanation
 -------------------------------------------*/
-.explanation h3:after { content: "See Yourself in a Completely Different Way";  }
+.explanation h3:after { content: "See Yourself in a Different Way";  }
 
 
 /*-------------------------------------------    
@@ -205,5 +205,10 @@ sub, sup { line-height: 0; }
 
 
 @media screen and (min-width: 700px) {
-	
+	[role="article"], [role="banner"] { padding: 0 30% 7em 5%; text-align: right; position: relative; }
+		[role="article"] h3 { position: absolute; top: -0.75em; right: 7%; width: 18%; text-align: left; font-size: 1.5rem; }
+		[role="article"] h3:after { position: absolute; top: 0; }
+
+	.preamble { padding-top: 10em; }
+		.preamble h3 { top: 5.9em; }
 }
