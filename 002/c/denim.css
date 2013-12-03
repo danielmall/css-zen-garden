@@ -40,7 +40,16 @@ h2, .h2 { font: bold 1.8rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
 h3, .h3 { font: bold 1.5rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
 h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
 
+.wf-active body,
+.wf-active h1, .wf-active .h1,
+.wf-active h2, .wf-active .h2,
+.wf-active h3, .wf-active .h3,
+.wf-active h4, .wf-active .h4,
+.wf-active h5, .wf-active .h5,
+.wf-active h6, .wf-active .h6 { font-family: "effra"; }
+
 p, ul, dl, ol, table { font-size: 16px; margin: 0 0 1.5em; }
+.wf-active p { font-weight: 300; }
 
 form { margin: 0 0 1.5em; }
 
@@ -114,22 +123,26 @@ sub, sup { line-height: 0; }
 -------------------------------------------*/
 .page-wrapper { width: 94%; margin: 0 auto; }
 
-.main h3, .preamble h3, .select { visibility: hidden; }
-.main h3:after, .preamble h3:after, .select:after { visibility: visible; display: block; font-size: 2.7rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.main h3, .preamble h3, .select { visibility: hidden; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.wf-active .main h3, .wf-active .preamble h3 { font-weight: 900; }
+
+.main h3:after, .preamble h3:after, .select:after { visibility: visible; display: block; }
 
 .main p, .preamble p { font-size: 2rem; }
+.wf-active .main p, .wf-active .preamble p { line-height: 1.4; }
 
 
 
 /*-------------------------------------------    
 	Banner
 -------------------------------------------*/
-[role="banner"] h1 { padding: 1em 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-size: 3.5rem; }
+[role="banner"] h1 { padding: 1em 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-size: 3.5rem; font-weight: 900; }
 [role="banner"] h1:before { content: "The "; }
-[role="banner"] h1:after { content: "Made in China"; visibility: visible; display: block; color: #686a6c; letter-spacing: 0.5em; font-size: 1.4rem; font-weight: normal; margin: 0.5em 0 0; }
+[role="banner"] h1:after { content: "Made in China"; visibility: visible; display: block; color: #aaa; letter-spacing: 0.5em; font-size: 1.4rem; font-weight: normal; margin: 0.5em 0 3em; }
 
 [role="banner"] h2 { visibility: hidden; display: none; }
 [role="banner"] h2:after { content: "Ringspun Denim"; visibility: visible; display: block; }
+
 
 
 /*-------------------------------------------    
@@ -179,6 +192,18 @@ sub, sup { line-height: 0; }
 		.design-selection li:nth-child(odd) { width: 47%; padding-right: 3%; clear: left; }
 			.design-name { display: block; font-size: 1.4rem; font-weight: bold; margin: 0 0 0.24em; text-transform: uppercase; letter-spacing: 0.1em; position: relative; }
 			/*.design-name:after { content: ""; display: inline-block; position: absolute; width: 100%; height: 2px; bottom: 0; left: 0; background: #a28351; }*/
+			.designer-name { color: #7989a3; }
 
 
 .select:after { content: "Washes & Styles"; font-size: 1.8rem; text-align: center; width: 7em; margin: 0 auto 2em; background: transparent url(../i/waves.png) no-repeat 50% 0; padding: 2em 0 0; }
+
+
+.archives { position: absolute; left: -9999px;  }
+
+
+
+
+
+@media screen and (min-width: 700px) {
+	
+}
