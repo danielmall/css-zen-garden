@@ -35,18 +35,18 @@ body { font-family: Helvetica, Arial, sans-serif; color: #333; background: #e8ec
 
 /* block level */
 
-h1, .h1 { font: bold 4.2rem Helvetica, Arial, sans-serif; margin: 0 0 0.5em; }
-h2, .h2 { font: bold 1.8rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
-h3, .h3 { font: bold 1.5rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
-h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h1 { font: bold 4.2rem Helvetica, Arial, sans-serif; margin: 0 0 0.5em; }
+h2 { font: bold 1.8rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h3 { font: bold 1.5rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h4, h5, h6 { font: bold 1.2rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
 
 .wf-active body,
-.wf-active h1, .wf-active .h1,
-.wf-active h2, .wf-active .h2,
-.wf-active h3, .wf-active .h3,
-.wf-active h4, .wf-active .h4,
-.wf-active h5, .wf-active .h5,
-.wf-active h6, .wf-active .h6 { font-family: "effra"; }
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5,
+.wf-active h6 { font-family: "effra"; }
 
 p, ul, dl, ol, table { font-size: 16px; margin: 0 0 1.5em; }
 .wf-active p { font-weight: 300; }
@@ -218,7 +218,7 @@ sub, sup { line-height: 0; }
 		[role="banner"] h1:after { position: absolute; top: 21.7em; right: 30%; }
 		
 		[role="banner"] h2 { display: block; top: 8.1em; width: 3em; left: 75.5%; font-size: 1.9rem; line-height: 1; }
-		[role="banner"] h2:before { visibility: visible; content: "Est. 2003"; display: block; position: fixed; top: -0.1em; bottom: 0; left: -0.5em; right: 0; margin: auto; /*right: 25%;*/ font-weight: 900; font-size: 50rem; color: rgba(0, 0, 0, 0.03); width: 100%; line-height: 1; transform: rotate(-90deg); -ms-transform: rotate(-90deg); /* IE 9 */ -webkit-transform: rotate(-90deg); /* Safari and Chrome */ }
+		[role="banner"] h2:before { visibility: visible; content: "Est. 2003"; display: block; position: fixed; top: -0.1em; bottom: 0; left: -0.5em; right: 0; margin: auto; /*right: 25%;*/ font-weight: 900; font-size: 50rem; color: rgba(0, 0, 0, 0.15); width: 100%; line-height: 1; transform: rotate(-90deg); -ms-transform: rotate(-90deg); /* IE 9 */ -webkit-transform: rotate(-90deg); /* Safari and Chrome */ -webkit-mask-image: url(../i/denim-mask.png); -o-mask-image: url(../i/denim-mask.png); -moz-mask-image: url(../i/denim-mask.png); mask-image: url(../i/denim-mask.png); }
 
 	.preamble { padding-top: 10em; }
 		.preamble h3 { top: 5.9em; }
