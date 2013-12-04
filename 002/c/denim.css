@@ -16,7 +16,6 @@ http://superfriend.ly/
 -------------------------------------------*/
 
 
-
 /*-------------------------------------------    
     Flag
         (Thanks Jeremy: http://adactio.com/journal/5429/)
@@ -72,8 +71,24 @@ mark { background: none; font-style: normal; }
 
 video { width: 100%; height: auto; }
 
-a { text-decoration: none; color: #a28351; }
-a:hover, a:focus { font-style: italic; }
+a { 
+	text-decoration: none; color: #a28351; position: relative; 
+	    transition: all 0.25s linear;
+   -moz-transition: all 0.25s linear;
+-webkit-transition: all 0.25s linear;
+	 -o-transition: all 0.25s linear;
+}
+
+a:after { 
+	content: ""; display: block; background: #a28351; height: 2px; width: 100%; position: absolute; bottom: -0.2em; left: 0; opacity: 0; 
+	    transition: all 0.25s linear;
+   -moz-transition: all 0.25s linear;
+-webkit-transition: all 0.25s linear;
+	 -o-transition: all 0.25s linear;
+}
+
+a:hover, a:focus { color: #000; }
+a:hover:after, a:focus:after { opacity: 1; bottom: 0; }
 
 img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
 
@@ -118,6 +133,8 @@ sub, sup { line-height: 0; }
 
 .rwd-break { display: block; }
 
+.kellum { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
 /*-------------------------------------------    
 	Modules
 -------------------------------------------*/
@@ -130,6 +147,21 @@ sub, sup { line-height: 0; }
 
 .main p, .preamble p { font-size: 2rem; }
 .wf-active .main p, .wf-active .preamble p { line-height: 1.4; }
+
+.next a,
+.viewall a,
+.zen-resources a 
+{	
+        transition-property: none;
+   -moz-transition-property: none;
+-webkit-transition-property: none;
+     -o-transition-property: none;
+}
+
+.next a:after,
+.viewall a:after,
+.zen-resources a:after 
+{ opacity: 0; }
 
 
 
@@ -190,25 +222,64 @@ sub, sup { line-height: 0; }
 	.design-selection ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 		.design-selection li { float: left; width: 50%; font-size: 1.2rem; margin: 0 0 1em; color: #aaa; }
 		.design-selection li:nth-child(odd) { width: 47%; padding-right: 3%; clear: left; }
+
 			.design-name { display: block; font-size: 1.4rem; font-weight: bold; margin: 0 0 0.24em; text-transform: uppercase; letter-spacing: 0.1em; position: relative; }
-			/*.design-name:after { content: ""; display: inline-block; position: absolute; width: 100%; height: 2px; bottom: 0; left: 0; background: #a28351; }*/
+			.design-name:after { background: none; opacity: 0; }
+			.design-name:hover { font-style: italic; }
+			
 			.designer-name { color: #7989a3; }
+			.designer-name:after, footer a:after { height: 1px; }
 
 
 .select:after { content: "Washes & Styles"; font-size: 1.8rem; text-align: center; width: 7em; margin: 0 auto 2em; background: transparent url(../i/waves.png) no-repeat 50% 0; padding: 2em 0 0; color: #182e4f; }
 
+.archives, .resources { position: absolute; left: -9999px;  }
 
-.archives { position: absolute; left: -9999px;  }
+.design-archives ul { list-style: none; margin: 0; width: 100%; text-align: center; }
+	.design-archives li { display: inline-block; }
+	.design-archives a { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
+.next { margin-right: 3em; }
+	.next a { background: transparent url(../s/czg.svg) no-repeat 10px -56px; width: 43px; height: 37px; }
+	.next a:hover, .next a:focus { background-position: 10px -138px; }
 
+.viewall { margin-left: 1em; }
+	.viewall a { background: transparent url(../s/czg.svg) no-repeat -56px -55px; width: 39px; height: 39px; }
+	.viewall a:hover, .viewall a:focus { background-position: -56px -137px; }
 
+footer { font-size: 1.3rem; }
+	footer a { margin-left: 1em; }
+	footer a:first-child { margin-left: 0; }
+
+.zen-resources ul { list-style: none; margin: 2em 0 4em; text-align: center; }
+.zen-resources ul:before { content: ""; height: 4px; width: 80px; background: #d5d9dc; display: block; text-align: center; margin: 0 auto 2em; }
+	.zen-resources li { margin: 0 0 1em 3em; display: inline-block; }
+	.zen-resources li:first-child { margin-left: 0; }
+		.zen-resources a { display: inline-block; text-indent: 100%; white-space: nowrap; overflow: hidden; background: transparent url(../s/czg.svg) no-repeat 0 0; width: 60px; height: 60px; }
+		
+		.view-css a { background-position: -502px 12px; }
+		.view-css a:hover, .view-css a:focus { background-position: -502px -78px; }
+
+		.css-resources a { background-position: -150px -194px; }
+		.css-resources a:hover, .css-resources a:focus { background-position: -150px -286px; }
+
+		.zen-faq a { background-position: -265px -192px; }
+		.zen-faq a:hover, .zen-faq a:focus { background-position: -265px -284px; }
+
+		.zen-submit a { background-position: -502px -194px; }
+		.zen-submit a:hover, .zen-submit a:focus { background-position: -502px -286px; }
+
+		.zen-translations a { background-position: -380px -193px; }
+		.zen-translations a:hover, .zen-translations a:focus { background-position: -380px -285px; }
 
 
 @media screen and (min-width: 700px) {
 
 	body { background-attachment: fixed; background-position: 90% 80%; }
 
-	[role="article"], [role="banner"] { padding: 0 30% 10em 10%; text-align: right; position: relative; }
+	.intro:before { content: ""; display: block; width: 105px; height: 30px; position: fixed; top: 154px; left: 5%; background: transparent url(../s/czg.svg) no-repeat -184px -99px; }
+
+	[role="article"], [role="banner"], footer { padding: 0 30% 10em 10%; text-align: right; position: relative; }
 		[role="article"] h3, [role="banner"] h2 { position: absolute; top: -0.75em; left: 75%; width: 10em; text-align: left; font-size: 1.5rem; letter-spacing: 0; }
 		[role="article"] h3:after { position: absolute; top: 0; }
 
@@ -225,6 +296,11 @@ sub, sup { line-height: 0; }
 
 	.design-selection li { width: 23%; margin-bottom: 3em; padding-right: 2%; }
 	.design-selection li:nth-child(odd) { width: 23%; clear: none; padding-right: 2%; }
+
+	.next { margin-right: 2em; margin-left: -0.4em; }
+	.viewall { margin-left: 0; }
+
+	footer { padding-bottom: 3em; margin-top: -5em; }
 }
 
 
@@ -232,15 +308,17 @@ sub, sup { line-height: 0; }
 
 	[role="article"], [role="banner"] { padding-left: 25%; }
 
-	.sidebar { position: absolute; left: 5%; top: 30em; }
+	.design-selection { position: absolute; left: 5%; top: 30em; }
 		.design-selection ul { margin: 0; width: 100%; }
 			.design-selection li { float: none; width: 100% !important; padding: 0 !important; margin-bottom: 2em;}
 		.select:after { text-align: left; background-position: 0 bottom; padding: 0 0 2em; margin: 0 0 2em; }
 
+	.design-archives { position: absolute; left: 5%; top: 95em; }
+
 }
 
 
-@media screen and (min-width: 1130px) and (min-height: 1159px)  {
-	.sidebar { position: fixed; }
+@media screen and (min-width: 1130px) and (min-height: 1037px)  {
+	.design-selection, .design-archives { position: fixed; }
 
 }
