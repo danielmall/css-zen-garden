@@ -294,8 +294,14 @@ footer { font-size: 1.3rem; }
 		[role="banner"] h2:before { visibility: visible; content: "Est. 2003"; display: block; position: fixed; top: -0.1em; bottom: 0; left: -0.5em; right: 0; margin: auto; /*right: 25%;*/ font-weight: 900; font-size: 50rem; color: rgba(0, 0, 0, 0.15); width: 100%; line-height: 1; transform: rotate(-90deg); -ms-transform: rotate(-90deg); /* IE 9 */ -webkit-transform: rotate(-90deg); /* Safari and Chrome */ -webkit-mask-image: url(../i/denim-mask.png); -o-mask-image: url(../i/denim-mask.png); -moz-mask-image: url(../i/denim-mask.png); mask-image: url(../i/denim-mask.png); }
 
 		.summary p:nth-child(2) { background: yellow; position: relative; visibility: hidden; top: 2em; font-size: 1.4rem; }
+
+			.summary p:nth-child(2):before { content: ""; display: block; visibility: visible; position: absolute; right: 21em; top: -0.25em; background: transparent url(../s/czg.svg) no-repeat -159px -1px; width: 6em; height: 30px; }
+
+			.summary p:nth-child(2):after { content: ""; display: block; visibility: visible; position: absolute; right: 14em; top: -0.25em; background: transparent url(../s/czg.svg) no-repeat -277px 0; width: 6em; height: 30px; }
+
 			.summary p:nth-child(2) a { visibility: visible; background: transparent url(../s/czg.svg) no-repeat -376px -93px; width: 6em; height: 25px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 0; right: 7em; }
 			.summary p:nth-child(2) a:hover, .summary p:nth-child(2) a:focus { background-position: -396px -3px; text-indent: 0; background: none; }
+			
 			.summary p:nth-child(2) a[href*="css"] { background-position: -472px -94px; right: 0; }
 			.summary p:nth-child(2) a[href*="css"]:hover, .summary p:nth-child(2) a[href*="css"]:focus { background-position: -512px -4px; }
 
