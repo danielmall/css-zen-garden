@@ -366,7 +366,7 @@ footer { font-size: 1.3rem; }
 }
 
 
-.sidebar {
+.design-selection, .design-archives {
 	opacity: 0;
 	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 1s; 
@@ -375,3 +375,4 @@ footer { font-size: 1.3rem; }
 	-webkit-animation-fill-mode: forwards;
 	-webkit-animation-iteration-count: 1;
 }
+
