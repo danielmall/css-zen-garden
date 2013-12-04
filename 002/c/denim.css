@@ -103,8 +103,8 @@ code { font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace; color: #999; 
 
 sub, sup { line-height: 0; }
 
-::selection { background: #2a69c2; color: #fff; }
-::-moz-selection { background: #2a69c2; color: #fff; }
+::selection { background: #d5d9dc; color: #333; }
+::-moz-selection { background: #d5d9dc; color: #333; }
 
 
 /*-------------------------------------------    
@@ -335,4 +335,43 @@ footer { font-size: 1.3rem; }
 @media screen and (min-width: 1130px) and (min-height: 1037px)  {
 	.design-selection, .design-archives { position: fixed; }
 
+}
+
+
+
+/*-------------------------------------------    
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.intro { 
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-iteration-count: 1;
+}
+
+
+[role="article"] {
+	opacity: 0;
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: 1;
+}
+
+
+.sidebar {
+	opacity: 0;
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: 1;
 }
