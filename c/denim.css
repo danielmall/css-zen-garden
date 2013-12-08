@@ -133,7 +133,7 @@ sub, sup { line-height: 0; }
 
 .main h3:after, .preamble h3:after, .select:after { visibility: visible; display: block; }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {   /* IE10-specific styles go here */  
+@media screen and (min-width:0\0) { /* IE9 and IE10 rule sets go here */  
 	.main h3, .preamble h3, .select { visibility: visible; }
 } 
 
@@ -208,7 +208,7 @@ sub, sup { line-height: 0; }
 .requirements h3:after { content: "“One Size Fits” All Be Damned!"; text-indent: -0.5em; }
 
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {   /* IE10-specific styles go here */  
+@media screen and (min-width:0\0) { /* IE9 and IE10 rule sets go here */   
 	.main h3:after, .preamble h3:after, .select:after { display: none; }
 } 
 
