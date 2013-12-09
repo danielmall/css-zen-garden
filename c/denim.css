@@ -133,10 +133,6 @@ sub, sup { line-height: 0; }
 
 .main h3:after, .preamble h3:after, .select:after { visibility: visible; display: block; }
 
-@media screen and (min-width:0\0) { /* IE9 and IE10 rule sets go here */  
-	.main h3, .preamble h3, .select { visibility: visible; }
-} 
-
 .main p, .preamble p { font-size: 2rem; }
 .wf-active .main p, .wf-active .preamble p { line-height: 1.4; }
 
@@ -207,10 +203,6 @@ sub, sup { line-height: 0; }
 -------------------------------------------*/
 .requirements h3:after { content: "“One Size Fits” All Be Damned!"; text-indent: -0.5em; }
 
-
-@media screen and (min-width:0\0) { /* IE9 and IE10 rule sets go here */   
-	.main h3:after, .preamble h3:after, .select:after { display: none; }
-} 
 
 
 /*-------------------------------------------    
@@ -375,9 +367,21 @@ footer { font-size: 1.3rem; }
 
 
 /*-------------------------------------------    
-	IE10
+	IE, i.e. Internet Explorer (heh)
 -------------------------------------------*/
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+
+@media screen and (min-width:0\0) { /* IE9 and IE10 rule sets go here */  
    
+   .main h3, .preamble h3, .select { visibility: visible; }
+
+   .main h3:after, .preamble h3:after, .select:after { display: none; }
+
 } 
 
+
+/* IE8 */
+.main h3, .preamble h3, .select { visibility: visible\0; font-size: 20px\0; }
+.main h3:after, .preamble h3:after, .select:after { display: none\0; }
+
+.page-wrapper { width: 960px\0; }
+.preamble { padding-top: 50px\0; margin-top: 50px\0; }
