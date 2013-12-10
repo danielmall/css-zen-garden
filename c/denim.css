@@ -137,6 +137,7 @@ sub, sup { line-height: 0; }
 .wf-active .main p, .wf-active .preamble p { line-height: 1.4; }
 
 .next a,
+.previous a,
 .viewall a,
 .zen-resources a,
 .summary p:nth-child(2) a
@@ -148,6 +149,7 @@ sub, sup { line-height: 0; }
 }
 
 .next a:after,
+.previous a:after,
 .viewall a:after,
 .zen-resources a:after,
 .summary p:nth-child(2) a:after 
@@ -233,6 +235,10 @@ sub, sup { line-height: 0; }
 .next { margin-right: 3em; }
 	.next a { background: transparent url(../s/czg.svg) no-repeat 10px -56px; width: 43px; height: 37px; }
 	.next a:hover, .next a:focus { background-position: 10px -138px; }
+
+.previous { margin-right: 3em; }
+	.previous a { background: transparent url(../s/czg.svg) no-repeat 10px -220px; width: 43px; height: 37px; }
+	.previous a:hover, .previous a:focus { background-position: 10px -302px; }
 
 .viewall { margin-left: 1em; }
 	.viewall a { background: transparent url(../s/czg.svg) no-repeat -56px -55px; width: 39px; height: 39px; }
@@ -379,12 +385,49 @@ footer { font-size: 1.3rem; }
 } 
 
 
-/* IE8 */
-.main h3, .preamble h3, .select { visibility: visible\0; font-size: 20px\0; }
-.main h3:after, .preamble h3:after, .select:after { display: none\0; }
+/* IE8 and below */
+.main h3, .preamble h3, .select { visibility: visible\9; font-size: 20px\9; }
+.main h3:after, .preamble h3:after, .select:after { display: none\9; }
 
-.page-wrapper { width: 960px\0; }
-.preamble { padding-top: 50px\0; margin-top: 50px\0; }
+.page-wrapper { width: 800px\9; }
+.preamble { padding-top: 50px\9; margin-top: 50px\9; }
 
-h1 { font-size: 48px\0; text-transform: uppercase\0; margin: 0\0; }
-h2 { font-size: 14px\0; }
+h1 { font-size: 48px\9; text-transform: uppercase\9; margin: 0\9; padding-top: 30px\9;}
+h2 { font-size: 20px\9; }
+
+.next a, .previous a, .viewall a, .zen-resources a { background-image: url(../i/czg.png)\9; }
+
+
+
+/* IE7 & below */
+.next a, 
+.previous a,
+.viewall a, 
+.zen-resources a { 
+	*background: none; 
+	*width: auto; 
+	*height: auto; 
+	*display: block; 
+	*text-indent: 0; 
+	*white-space: normal; 
+	*overflow: visible; 
+}
+
+.design-archives { 
+	*position: static; 	
+	*margin-top: 30px;
+}
+
+.design-archives li {
+	*display: inline;
+	*margin-right: 20px;
+}
+
+.next { 
+	*margin-right: 2em; 
+	*margin-left: -0.4em; 
+}
+
+.viewall { 
+	*margin-left: 0; 
+}
