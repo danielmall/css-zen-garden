@@ -160,12 +160,12 @@ sub, sup { line-height: 0; }
 /*-------------------------------------------    
 	Banner
 -------------------------------------------*/
-[role="banner"] h1 { padding: 1em 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-size: 3.5rem; font-weight: 900; color: #182e4f; }
-[role="banner"] h1:before { content: "The "; }
-[role="banner"] h1:after { content: "Made in China"; visibility: visible; display: block; color: #aaa; letter-spacing: 0.5em; font-size: 1.4rem; font-weight: normal; margin: 0.5em 0 3em; color: rgba(24, 46, 79, 0.4); }
+[role="banner"] h1 { padding: 1em 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-size: 3.5rem; font-weight: 900; color: #182e4f; visibility: hidden; }
+[role="banner"] h1:before { content: "CSS Zen Garments"; visibility: visible; display: block; }
+[role="banner"] h1:after { content: "Made Locally"; visibility: visible; display: block; color: #aaa; letter-spacing: 0.5em; font-size: 1.4rem; font-weight: normal; margin: 0.5em 0 3em; color: rgba(24, 46, 79, 0.4); }
 
 [role="banner"] h2 { visibility: hidden; display: none; text-transform: uppercase; font-weight: 400; color: rgba(41, 78, 134, 0.5); }
-[role="banner"] h2:after { content: "Ringspun Denim"; visibility: visible; display: block; }
+[role="banner"] h2:after { content: "Impeccable Quality"; visibility: visible; display: block; }
 
 
 
@@ -228,8 +228,8 @@ sub, sup { line-height: 0; }
 
 .archives, .resources { position: absolute; left: -9999px;  }
 
-.design-archives ul { list-style: none; margin: 0; width: 100%; text-align: center; }
-	.design-archives li { display: inline-block; }
+.design-archives ul { list-style: none; margin: 1em 0 0; width: 100%; text-align: center; }
+	.design-archives li { display: inline-block; position: relative; }
 	.design-archives a { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
 .next { margin-right: 3em; }
@@ -379,8 +379,10 @@ footer { font-size: 1.3rem; }
 @media screen and (min-width:0\0) { /* IE9 and IE10 rule sets go here */  
    
    .main h3, .preamble h3, .select { visibility: visible; }
+   [role="banner"] h1 { visibility: visible; width: auto; display: block; }
 
    .main h3:after, .preamble h3:after, .select:after { display: none; }
+   [role="banner"] h1:before { display: none; }
 
 } 
 
