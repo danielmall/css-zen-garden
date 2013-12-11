@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Typekit CSS Zen Garden</title>
+  <style type="text/css">
+  body { font: normal 100%/1.4 Arial, Helvetica, sans-serif; }
+  img { max-width: 100%; display: block; }
+  </style>
+</head>
+<body>
+<p>Before I became a designer, I worked in retail for years. Through high school and college, I worked at and managed departments for subsidiaries of Gap Inc., Foot Locker, The Limited, and more. One thing that constantly impressed me was the incredible art direction of the apparel’s graphic design: hangtags, labels, packaging… the stuff only the buyer sees.</p>
+<p><img src="http://czg.danielmall.com/_article/NEUARMY_TagHandaa.jpg" /> <img src="http://czg.danielmall.com/_article/RO_Honor_Hangtag_01.jpg" /> One of my favorite pairs of jeans has some beautiful printing on the inside, and I vowed to one day create a design, influenced by this lovely style:</p>
+<p><img src="http://czg.danielmall.com/_article/jeans.jpg" /> Today is that day. Introducing <a href="#">Garments</a>, my CSS Zen Garden theme.</p>
+<p><img src="http://czg.danielmall.com/_article/site.png" /> To carry the spirit of this design, I turned to Dalton Maag’s <a href="https://typekit.com/fonts/effra">Effra</a>, a modern geometric sans serif that surprises with soft and humanist design details. I was looking for something utilitarian but not vanilla, and, with more than its fair share of personality-filled glyphs, Effra fit the bill quite nicely.</p>
+<p>Now that we have such wonderful options for serving great typefaces on the web, the days of <a href="http://css-tricks.com/css-image-replacement/">image replacement</a> are all but gone. That’s good news for the progress of a speedier web, but one of the benefits of image replacement is the ability to modify the text without changing structural markup. As an example, check out one of my favorite CSS Zen Garden themes: <a href="http://www.csszengarden.com/057/">This is Cereal</a>, by designer/developer <a href="http://www.shauninman.com/">Shaun Inman</a>. In order to fit conceptually, his images include headlines like “One bowl away from enlightenment” instead of the original text of “The road to enlightenment.” Genius!</p>
+<p>I wanted to do the same, but since I’m not actually replacing anything, how could I thematically “style” the headlines without altering the markup? Enter <a href="http://www.w3.org/TR/CSS21/generate.html">generated content</a>.</p>
+<p>My first thought was to generate the content that I wanted using <code>:before</code> or <code>:after</code> and then hide the original text with <code>display: none;</code>. No dice; when you hide the original element, you can’t unhide content generated from said element. But, there’s one exception: the <code>visibility</code> property. If you set the original element’s visibility to <code>hidden</code>, you can “unhide” the generated content by explicitly setting the <code>visibility</code> to <code>visible</code>.</p>
+<p>My final code for the headings ended up looking something like this:</p>
+<pre>
+.preamble h3 { visibility: hidden; } 
+.preamble h3:after { visibility: visible; content: "A Fashion-Forward Future";  }
+</pre>
+
+<p>Voilà!</p>
+<p>The other big consideration for me was optimizing graphics, especially since <a href="http://blog.typekit.com/2013/11/21/typekits-first-css-zen-garden-theme-screen-filler/">Elliot</a> and <a href="http://blog.typekit.com/2013/11/26/typekits-second-css-zen-garden-theme-apothecary/">Trent</a> each did such a great job creating beautiful and fast-loading themes. Especially because the art direction of my theme lends itself to simple icons, I thought SVG would be a great way to go. I created an <a href="http://czg.danielmall.com/s/czg.svg">SVG sprite sheet</a> <strong style="background:yellow; color: red;">please link this to the sprite sheet on the Zen Garden, not on danielmall.com</strong> and ran it through my usual <a href="http://danielmall.com/articles/svg-workflow-for-designers/">SVG workflow</a> to get the file size as small as I could and also to generate some fallback PNGs.</p>
+<p>Well, without further ado, help us welcome this new CSS Zen Garden + Typekit collaboration and get cracking on your very own version!</p>
+
+<hr />
+
+<p>Dan Mall is the Founder &amp; Design Director of <a href="http://superfriend.ly/">SuperFriendly</a>, a design studio that makes brave sites and apps for screens of all sizes. Dan is the co-founder of <a href="http://typedia.com/">Typedia</a> and <a href="http://businessologyshow.biz/">The Businessology Show</a>. He writes about design and other issues on Twitter as <a href="http://twitter.com/danielmall">@danielmall</a> and on his site, <a href="http://danielmall.com/">danielmall.com</a>.</p>
+</body>
+</html>
